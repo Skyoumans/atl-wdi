@@ -12,24 +12,59 @@ Please do not use any resource other than the class wiki
 to answer these questions.
 
 1.  What are the three requirements for completing this course?
+
+    1. Homework submission needs to be 80% or higher
+    2. Attendance myst be consistent
+    3. All unit projects need be submitted and presented to the instructional team and should meet project rubric expectations
+
 2.  At what URL can you find a series of videos covering the terminal, created
-    by one of GA's senior instructors?
+by one of GA's senior instructors?
+
+    1.
+    https://github.com/ATL-WDI-Curriculum/atl-wdi/wiki/GA-Youtube-Content
+
 3.  What book by Douglas Crockford is on our recommended reading list?
+
+    1. Javascript the Good Parts
+
 4.  According to our Git style guide, when writing the detailed description of
-    a commit in its commit message, what three types of things are most
-    important to mention?
+a commit in its commit message, what three types of things are most
+important to mention?
+
+    1. It is imperative that it has present tense, is capitalized, adn fewer than 50 characters. 
+
 5.  What does a bug report need to have before it can be submitted to the bug
-    journal?
+journal?
+
+    1. A detailed description of the error/bug, what you have tried, as well as the question you are trying to answer.
+
 6.  There are three Git tutorials referenced in the Wiki. What are they?
-7.  List at least two basic UI styling tips that will help your projects
-    look good.
+
+    1. A Git styleguide
+    2. A Git cheatsheet 
+    3. Atlassian Git Tutorials
+
+7.  List at least two basic UI styling tips that will help your projects look good.
+
+    1. Style your buttons
+    2. Don't use true black
+
 8.  What is the maximum number of absences a student can have, and how many
     'tardies' are equal to an absence?
+
+    1. A student can have up to three absences.
+    2. 6 'tardies' (3 at the beginning of class and 3 at the end) make up one absence.
+
 9.  Where can you find a directory of publicly-accessible APIs?
     Give at least one URL.
+
+    1. http://www.programmableweb.com/apis/directory
+
 10. What two holidays will we have during this course (not counting the long
     winter break)?
 
+    1. Veterans Day
+    2. Labor Day
 ## Submitting Your Work
 
 When you're ready, create an issue on the class repo with
