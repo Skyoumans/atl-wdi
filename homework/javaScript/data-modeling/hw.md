@@ -60,7 +60,22 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+>A task requires a title, a start date, a completed date, and a duration time.
+>A project requires a title, description, and a set list of the tasks involved.
+
+```javascript
+  var task = {
+    title: "My to-do list";
+    dateStarted: "04/12/2016";
+    dateCompleted: "04/13/2016";
+    duration: "24 hours";
+}
+  var projects = {
+    title: "My to-do projects";
+    description: "describe my project";
+    setOfTasks: ["list of various tasks inserted here"];
+
+  }
 
 ### 2. Photo Sharing App
 

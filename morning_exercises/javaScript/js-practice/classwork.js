@@ -33,23 +33,28 @@ var resFive = true;
 // 6. Write a `while` loop that increases `resSix` by 23 until `resSix` is five
 //    digits long. (Hint: take a look at the .toString() method)
 var resSix = 0;
-  while (resSix <= 12345); {
+  do {
     console.log(resSix);
-  resSix + 23;
+    resSix+23;
   }
+  while (resSix <= 12345);
   
 // Replace This Comment With Your Code
 
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
 //    below 95, decreases it by 7 when it's strictly above 105, and stops as
 //    soon as `resSeven` equals or falls between those two values.
-var resSeven;
+var resSeven = 0;
+  while (resSeven < 95 && resSeven > 105); {
+
+  }
+
 // Replace This Comment With Your Code
 
 // 8. Write a `for` loop that counts from 0 (inclusive) to 1857 (exclusive) and
 //    calculates the sum of all of those numbers, storing the result in the
 //    variable `resEight`.
-var resEight;
+var resEight = 0;
 // Replace This Comment With Your Code
 
 // 9. Using a `for` loop, calculate the sum of all multiples of 7 between 0
