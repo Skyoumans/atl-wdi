@@ -9,38 +9,65 @@ function maxOfTwoNumbers(x, y) {
 }
 
 // Question 2
-function maxOfThree() {
-
+function maxOfThree(x, y, z) {
+    if( x > y && x > z) {
+        return x;
+    }
+    else if( y > x && y > z ) {
+        return y;
+    }
+    else {
+        return z;
+    }
 }
 
 // Question 3
-function isCharacterAVowel() {
-
+function isCharacterAVowel(c) {
+    var vowels = ["a","e", "i", "o", "u"];
+     if (vowels.indexOf(c) != -1) {
+       return true;
+     }
+       return false;
 }
+isCharacterAVowel("c");
 
 // Question 4
-function sumArray() {
- 
+var num = [1, 2, 3, 4];
+function sumArray(num) {
+    var sum = 0;
+    for (i = 0; i < num.length; i++ ) {
+        sum += num[i];
+    }
+    return sum;
 }
-
+sumArray(num);
 
 // Question 4
-function multiplyArray() {
-
+var num = [1, 2, 3, 4];
+function multiplyArray(num) {
+    var sum = 1;
+    for (i = 0; i < num.length; i++) {
+        sum *= num[i];
+    }
+    return sum;
 }
-
+sumArray(num);
 
 // Question 5
-var numberOfArguments = function(){
+var numberOfArguments = function(args){
+    var args = ["This", "Is", "an", "argument"];
+    return args.length;
+  };
+  numberOfArguments();
   
 }
-
 
 
 // Question 6
-var reverseString = function (){
-  
-};
+var reverseString = function (string){
+    return string.split('').reverse().join('');
+  };
+  reverseString("This is backwards")
 
 
 // Question 7
