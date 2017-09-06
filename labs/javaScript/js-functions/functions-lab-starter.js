@@ -60,14 +60,13 @@ var numberOfArguments = function(args){
   };
   numberOfArguments();
   
-}
 
 
 // Question 6
 var reverseString = function (string){
     return string.split('').reverse().join('');
   };
-  reverseString("This is backwards")
+  reverseString("This is backwards");
 
 
 // Question 7
