@@ -64,25 +64,45 @@ keep them organized.
 >A project requires a title, description, and a set list of the tasks involved.
 
 ```javascript
-  var task = {
+  let task = {
     title: "My to-do list";
     dateStarted: "04/12/2016";
     dateCompleted: "04/13/2016";
     duration: "24 hours";
 }
-  var projects = {
+  let projects = {
     title: "My to-do projects";
     description: "describe my project";
     setOfTasks: ["list of various tasks inserted here"];
 
   }
+```
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+> Users would have a username, a password, set of albums and photos they've uploaded and created.
+> Albums should have a title and photoset.
+> Photos should have a name, description, and URL  link
 
+```javascript
+  let photos = {
+    name: "My Dog";
+    description: "my dog eating a bone";
+    URL_link: "insert link here";
+  }
+  let albums = {
+    title: "my album title";
+    setOfPhotos: ["set1", "set2", "set3"]
+  }
+  const User = {
+    userName: "Linda99";
+    password: "bubblesTheDog1999";
+    dateUploadedPhoto: "xx/xx/xxxx";
+    dateCreatedAlbum: "xx/xx/xxxx";
+  }
+```
 ### 3. Home Automation Manager
 
 This app will be a tool for managing a home automation system; it will keep
@@ -90,7 +110,21 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+> Keeps track of time, temp, and lights.
+> A light has brightness levels, a name, and location
+>A home has temeratures and the sets of lights
+```javascript
+  var lights = {
+    brightnessLevel: "dim";
+    name: "lamps";
+    loacation: "living room";
+  }
+  var home = {
+    temperature: 72;
+    setOfLights: ["living room", "bedroom", "bathroom", "garage"]
+  }
+
+```
 
 ### 4. Sneaker Store
 
@@ -98,7 +132,27 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+> A data model describing the name,  availability, and price of the sneaker
+> A shopping cart would have a list of ordered items, complete or incomplete purchase, and date completed
+> An order showing the list of items and quantity of items.
+```javascript
+  var product = {
+    name: "Air Jordans"
+    description: "over-priced shoes";
+    availability: 47;
+    price: "$110";
+  }
+  var cart = {
+    product: "Air Jordans"
+    quantitiy: 1;
+  }
+  var orderPage = {
+    product: ["Air Jordans, Converse low-tops, Sanuk flip-flops"];
+    status: "incomplete";
+    dateReceived: "Not Received Yet";
+
+  }
+```
 
 ## Representing Abstractions in Code
 
@@ -154,7 +208,8 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> They are at a disadvantage because the information given above isn't enough information for the app's purpose. They need to have other properties, like arrivalTime or stopsBetween.
+> The rail lines are easy to call within an array.
 
 ### 6. Doctor Appointment App
 
@@ -257,7 +312,8 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+> Option 2 is easier to find the appointments of patients, but not the doctor they've been given to.
+> Option 1 is  making it easier to find all the appointments, patients, and scheduled times a doctor could have. But it would be harder to find each patient's doctor.
 
 ## Tying It Together
 
@@ -268,13 +324,29 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  >  the X and O characters.
+  >  The players profile with username, id, and score.
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
-
+  ````javascript
+  var game = {
+    xPlayer: "blitzkrieg09"; {
+      score: "11";
+      id: "http://blahpic.com";
+    }
+    oPlayer: "booyguet2";
+      score: "9";
+      id: "http://blahpic.com";
+      position: "http://blahpic.com";
+  }
+  var moves {
+    character: "X"
+    spot: "3B"
+  }
+````
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+ > You need to have a way to move the characters to different spots. You also want someone of keeping score and a record of your player and his/her avatar.
+ > the entities are chosen to provide enough information about the players in the current game. And then the moves allow for the JS to provide placement and carry on until the game is done.
