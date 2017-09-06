@@ -308,13 +308,13 @@ function double (z) {
   return z * 2;
 }
 
-const num = sum(3, 4)
+let num = sum(3, 4)
 => 7
-const numDbl = double(num);
+let numDbl = double(num);
 => 14
 
 // This can also be written:
-const num = double(sum(3,4));
+let num = double(sum(3,4));
 => 14
 ```
 
@@ -517,25 +517,24 @@ Work through as many as these exercises as you can within the next 15 mins - use
 method should return a string with the order of the words reversed. Don't worry
 about punctuation.
 
-    ```javascript
+```javascript
 	wordReverse("Now I know what a TV dinner feels like")
 	# => "like feels dinner TV a what know I Now"
 	wordReverse("Put Hans back on the line")
 	# => "line the on back Hans Put"
-	```
+```
 
 <br>
 
-## Independent Practice #2 - JS Functions Lab (40 min)
+## Independent Practice #2 - JS Functions Lab 
 
 [js-functions-lab](../../labs/javaScript/js-functions) in student labs folder
 
-I'll put you into groups. Each group will be responsible for sharing the solution to their assigned problem.
-
+<!-- I'll put you into groups. Each group will be responsible for sharing the solution to their assigned problem. -->
 <br>
 
 <a name="lab1"></a>
-## BONUS Independent Practice #3 - Rolling Dice: Lab (40 min)
+## BONUS Independent Practice #3 - Rolling Dice: Lab
 [JavaScript Dice](https://github.com/ATL-WDI-Curriculum/atl-wdi/blob/master/labs/javaScript/js-dice)
 
 For this lab, you'll be creating a page that displays a random update of two dice every time the user hits the "Roll Dice" button. To get started, open the [app.js file](https://github.com/ATL-WDI-Curriculum/atl-wdi/blob/master/labs/javaScript/js-dice/starter-code/js/app.js). Use the HTML and CSS code included in the starter code folder.
