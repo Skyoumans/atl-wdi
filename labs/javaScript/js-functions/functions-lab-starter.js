@@ -1,6 +1,11 @@
 // Question 1
-function maxOfTwoNumbers() {
-
+function maxOfTwoNumbers(x, y) {
+    if (x < y) {
+        return y;
+    }
+    else {
+        return x;
+    }
 }
 
 // Question 2
