@@ -1,0 +1,29 @@
+var totalCost = 825;
+const barrel = (small, large, total) => {
+  var smallBarrel = 60;
+  largeBarrel = (totalCost - (small * smallBarrel)) / large;
+  return largeBarrel;
+};
+
+barrel(2,3,825);
+
+var cirOfEarth = 24901;
+const shipFuelCost = (fuelPrice, milesPerGallon) => {
+    var gallonsUsed = cirOfEarth / milesPerGallon;
+    var costOfTrip = gallonsUsed * fuelPrice;
+
+    return costOfTrip
+};
+
+shipFuelCost(3, 12) 
+
+const calcFruitJuice = (costcoGallons, costcoPure, kirklandsGallons, kirklandPure) => {
+    const totalCostcoFruitJuice = (costcoPure/100) * costcoGallons;
+    const totalKirklandsFruitJuice = (kirklandPure/100) * kirklandsGallons;
+    const totalCombinedFruitJuice = totalCostcoFruitJuice + totalKirklandsFruitJuice;
+    const totalJuice = costcoGallons + kirklandsGallons;
+    return totalCombinedFruitJuice / totalJuice
+
+};
+
+calcFruitJuice(3, 20, 2, 55)
