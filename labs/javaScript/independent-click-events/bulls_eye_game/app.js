@@ -23,6 +23,9 @@ window.onload = function() {
 
   body.addEventListener('click', bullseyeGame.miss);
   ring1.addEventListener('click', bullseyeGame.outerRing)
+  ring2.addEventListener('click', bullseyeGame.middleRing)
+  ring3.addEventListener('click', bullseyeGame.innerRing)
+  
 }
 
 
@@ -46,6 +49,20 @@ var bullseyeGame = {
 
   outerRing: function(event) {
     event.stopPropagation();
+    var outerRing = this;
+
+      setScore(function() {
+
+      })
     alert('outerRing was clicked')
+  },
+  middleRing: function(event) {
+    event.stopPropagation();
+    alert('middleRing was clicked')
+  },
+  innerRing: function(event) {
+    event.stopPropagation();
+    alert('innerRing was clicked')
   }
+
 }
