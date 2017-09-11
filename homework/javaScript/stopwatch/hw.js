@@ -18,10 +18,21 @@ const Stopwatch = {
   laps: [],
   // DO NOT EDIT ABOVE THIS LINE
   advanceTenMillisecs: function(){
-    // Your Code Here
+    this.millisecs += 10;
+    if (this.millisecs >= 1000) {
+      this.millisecs -= 1000;
+      this.secs++;
+    }
+    if (this.secs >= 60) {
+      this.secs -= 60;
+      this.mins++;
+    }
   },
   reset: function(){
-    // Your Code Here
+    this.millisecs = 0;
+    this.secs = 0;
+    this.mins = 0;
+    this.laps = 0;
   },
   start: function(){
     // Your Code Here
