@@ -1,0 +1,14 @@
+{
+  "name": "pizza-express",
+  "version": "1.0.0",
+  "description": "Create the pizza of your dreams",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Skylar Youmans",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
