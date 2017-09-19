@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const hbs = require('hbs');
+
+app.set("view enging", "hbs");
+app.set('views', './views');
 
 app.listen(port, function() {
     console.log("Listening on port " + port);
