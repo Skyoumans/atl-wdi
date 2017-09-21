@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const data = require('../data.js');
 
-/* INDEX TODOS */
+/* INDEX ROUTE */
 router.get('/', function(req, res) {
     
       res.render('todos/index', {
@@ -10,12 +10,12 @@ router.get('/', function(req, res) {
       });
     });
 
-/* NEW TODOS */
+/* NEW ROUTE */
 router.get('/new', (req, res) => {
     res.render('todos/new');
 })
 
-/* SHOW TODOS */
+/* SHOW ROUTE */
 router.get('/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const todo = data.seededTodos[id];
@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
 }
 })
 
-/* POST TODOS (Dont forget to install body-parser)*/
+/* POST ROUTE (Dont forget to install body-parser)*/
 router.post('/', (req, res) => {
     console.log(req.body)
     const newTodo = req.body
@@ -40,7 +40,28 @@ router.post('/', (req, res) => {
     res.redirect('/todos');
 });
 
-/* DELETE TODOS */
+/* EDIT ROUTE */
+router.get('/:id/edit', function(req, res){
+    res.render('todos/edit', {
+      todo: {
+        id: req.params.id,
+        description: data.seededTodos[req.params.id].description,
+        urgent: data.seededTodos[req.params.id].urgent,
+      }
+    });
+  });
+
+/* UPDATE ROUTE */
+router.put('/:id', function(req, res) {
+    var todoToEdit = data.seededTodos[req.params.id];
+  
+    todoToEdit.description = req.body.description;
+    todoToEdit.urgent = req.body.urgent;
+  
+    res.redirect('/todos');
+  });
+
+/* DELETE ROUTE */
 router.delete('/:id', function(req, res) {
     data.seededTodos.splice(req.params.id, 1); // remove the item from the array
 
