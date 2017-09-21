@@ -3,12 +3,12 @@ const router = express.Router();
 const data = require('../data.js');
 
 /* INDEX TODOS */
-router.get('/', function(req,res) {
-  
-    res.render('todos/index', {
-      todos: data.seededTodos
+router.get('/', function(req, res) {
+    
+      res.render('todos/index', {
+        todos: data.seededTodos
+      });
     });
-  });
 
 /* NEW TODOS */
 router.get('/new', (req, res) => {
@@ -40,5 +40,11 @@ router.post('/', (req, res) => {
     res.redirect('/todos');
 });
 
+/* DELETE TODOS */
+router.delete('/:id', function(req, res) {
+    data.seededTodos.splice(req.params.id, 1); // remove the item from the array
+
+    res.redirect('/todos');  // redirect back to the index route
+});
 
   module.exports = router
