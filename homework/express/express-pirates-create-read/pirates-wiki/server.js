@@ -15,7 +15,6 @@ app.use("/pirates", pirateController);
 
 
 
-
 const port = 3000
 app.listen(port, () => {
     console.log("Express is listening on port", port);
