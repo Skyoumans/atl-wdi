@@ -18,6 +18,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const todont = data.seededToDonts[id];
+
 /* Show TODONTs Error */
     if (!todont) {
         res.render('toDonts/show', {
@@ -29,6 +30,7 @@ router.get('/:id', (req, res) => {
     });
     };
 });
+
 /* Show TODONTs Post */
 router.post('/', (req, res) => {
     const newToDont = req.body

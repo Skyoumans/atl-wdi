@@ -27,10 +27,36 @@ router.post('/', (req, res) => {
     res.redirect('/pirates');
 })
 
+router.get('/:id/edit', (req, res) => {
+    res.render('pirates/edit', {
+        pirates: {
+            id: req.params.id,
+            name: pirates.allThePirates[req.params.id].name,
+            birthplace: pirates.allThePirates[req.params.id].birthplace,
+            death_year: pirates.allThePirates[req.params].death_year,
+            base: pirates.allThePirates[req.params.id].base,
+            nickname: pirates.allThePirates[req.params.id].nickname,
+        }
+    })
+});
 
-// router.post('/', (req, res) => {
-//     const newPirate
-// })
+router.put('/:id', (req, res) => {
+    const pirateToEdit = pirates.allThePirates
+    [req.params.id];
 
+    pirateToEdit.name = req.body.name;
+    pirateToEdit.birthplace = req.body.birthplace;
+    pirateToEdit.death_year = req.body.death_year;
+    pirateToEdit.base = req.body.base;
+    pirateToEdit.nickname = req.body.nickname;
+
+    res.redirect('/pirates');
+})
+
+router.delete('/:id', (req, res) => {
+    pirates.allThePirates.splice(req.params.id, 1);
+
+    res.redirect('/pirates');
+})
 
 module.exports = router;
