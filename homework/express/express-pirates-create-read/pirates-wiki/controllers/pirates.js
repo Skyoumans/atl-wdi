@@ -33,7 +33,7 @@ router.get('/:id/edit', (req, res) => {
             id: req.params.id,
             name: pirates.allThePirates[req.params.id].name,
             birthplace: pirates.allThePirates[req.params.id].birthplace,
-            death_year: pirates.allThePirates[req.params].death_year,
+            death_year: pirates.allThePirates[req.params.id].death_year,
             base: pirates.allThePirates[req.params.id].base,
             nickname: pirates.allThePirates[req.params.id].nickname,
         }
