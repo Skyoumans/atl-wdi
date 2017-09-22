@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 const pirateController = require('./controllers/pirates.js');
 
 app.use(methodOverride('_method'));
-
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
