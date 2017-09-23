@@ -9,12 +9,12 @@ var player = {
   },
   medicateTamagotchi: function(tamagotchi) {
     tamagotchi.health++;
-    player.feedTamagotchi(shiro)
+    player.medicateTamagotchi(shiro)
     console.log(tamagotchi.name + ' has been medicated and now has health: ' + tamagotchi.health);
   },
   knockOutTamagotchi: function(tamagotchi) {
     tamagotchi.restedness++;
-    player.feedTamagotchi(shiro)
+    player.knockOutTamagotchi(shiro)
     console.log(tamagotchi.name + ' got some Zzzzs! Restedness: ' + tamagotchi.restedness);
   }
 }; //end player
