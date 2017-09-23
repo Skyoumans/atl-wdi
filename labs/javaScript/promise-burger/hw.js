@@ -6,7 +6,11 @@ const kitchen = require('./kitchen');
 // 1. Kitchen has a method called `.readMenu`.  
 // Call this method and console.log the data that comes back when the Promise is resolved.
 
-//CODE FOR QUESTION 1 HERE
+kitchen.readMenu()
+  .then((menu) => {
+    console.log("Successfully resolved the Promise")
+    console.log(menu);
+  })
 
 
 // Order Some Food
@@ -15,14 +19,20 @@ const kitchen = require('./kitchen');
 //  The order method has one argument, the name of the burger you would like to order.  
 //  Console.log the data that comes back about this burger.
 
-// CODE FOR QUESTION 2 HERE
+kitchen.order("Rebel Outlaw")
+.then((item) => {
+  console.log(item);
+});
 
 
 // 3. Try and use the same method to order a `quesadilla`.  
 //  Since Promise Burger only serves burgers, this will throw an error.  
 //  Make sure that your Promise can be dealt with when it is rejected.
 
-// CODE FOR QUESTION 3 HERE
+kitchen.order("Quesadilla")
+.catch((error) => {
+  console.error(error);
+});
 
 
 // Add A Burger To The Menu
@@ -38,15 +48,18 @@ const newBurger = {
   "name": "TRIPLE CORONARY BYPASS",
   "price": 28.95,
   "description": ` It becomes difficult to even describe this, the most preposterous of our Bypass Burgers. All you really need to know is that we use three burger patties, three fried eggs, fourteen slices of American cheese, and ten slices of bacon, all packed between two grilled cheese sandwiches. Figuring out how to add condiments is completely up to you. It’s served in a big bowl of french fries and tater tots covered, in lots of our Cheesy-Cheese Goo. Enjoy!`
-}
+};
 
-// CODE FOR QUESTION 4 HERE
+kitchen.addToMenu(newBurger)
+.then((menu) => {
+  console.log(kitchen.readMenu)
+});
 
 // 5. Validate that the new item has been added to the menu by calling `readMenu` again.  
 // We only want to call `readMenu` after we get a response that is successful. 
 // Remember that we can chain promises together the same way that we can chain jQuery methods.
 
-// REFACTOR QUESTION 4 TO ACCOUNT FOR THIS REQUIREMENT
+kitchen.readMenu().then(console.log).catch(console.log);
 
 // Stretch Goals
 /* *************************************************************** */
@@ -56,7 +69,7 @@ const newBurger = {
 // Loop through each customer and use the `.order` function on each object within the array.  
 // Then console.log `All Food Delivered` when ALL of the promises have been resolved.  
 // This will require you to use a method we haven't covered in class.
-
+//method to use: look up promise.all!!!!!!
 const customers = [
   {
     name: "Josie",
@@ -71,6 +84,10 @@ const customers = [
     name: "Katelyn",
     order: "Fat Elvis"
   }
-]
+];
 
-// CODE FOR QUESTION 6 HERE
+Promise.all(customers)
+.then((customers) => {
+  console.log("All Food Delivered")
+  console.log(customers)
+});
