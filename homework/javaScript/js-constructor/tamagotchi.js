@@ -22,16 +22,27 @@ class Tamagotchi {
         this.restedness--;
         console.log(this.name + ' has current restedness of ' + this.restedness)
     };
+    start() {
+        console.log("Starting" + this.name)
+        var alien = this;
+        this.hungerTimer = setInterval(() => {
+            alien.cry();
+        }, 6000);
+        this.yawnTimer = setInterval(() => {
+            alien.yawn();
+        }, 10000);
+        this.sickTimer = setInterval(() => {
+            alien.puke();
+        }, 20000);
+    }
+    stop() {
+        console.log("Stopping " + this.name);
+        clearInterval(this.hungerTimer);
+        clearInterval(this.sickTimer);
+        clearInterval(this.yawnTimer);
+    }
 }
 
 const shiro = new Tamagotchi('Shiro', 'Alien')
 console.log(shiro)
-shiro.cry()
-shiro.puke()
-shiro.yawn()
-
-const timmy = new Tamagotchi('Timmy', 'Predator')
-console.log(timmy)
-timmy.cry()
-timmy.puke()
-timmy.yawn()
+shiro.start()
