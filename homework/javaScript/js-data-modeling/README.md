@@ -29,37 +29,243 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
+#### The service provider has:
+  * An Id
+  * A Name
+  * Email Providers Attached
+
+#### The email provider has:
+  * A username
+  * A user password
+
 ```
-Write your answer here or in a separate js file.
+var serviceProvider = {
+  id: Number,
+  name: String,
+  emailProviders: []
+}
+
+var emailProvider = {
+  username: String
+  password: String
+}
+
 ```
 
 ### 2. Radio on the Internet app
 
 This app hosts a ton of radio stations, each featuring their own playlists of songs. The radio stations can be listed by genre or popularity.
 
+#### An Internet Radio App has:
+  * A name
+  * Stations
+  * Playlists
+
+#### A station has: 
+  * Name
+  * About the Genre
+  * Number of Likes
+
+#### A playlist has:
+  * Current song
+  * Current band
+  * Number of times played
+  * About the  current band
 
 ```
-Write your answer here or in a separate js file.
+var radioApp = {
+  name: String,
+  Stations: String,
+  Playlists: String
+}
+var station = {
+  name: String,
+  aboutGenre: String,
+  numLikes: Number
+}
+var playlist = {
+  currentSong: String,
+  currentBand: String,
+  numTimesPlayed: Number,
+  aboutBand: String
+}
 ```
 
 ### 3. Rock Concert App
 
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
+#### The tour has:
+  * A name
+  * A list of cities
+  * Concert Dates
+  * Ticket prices
+
+#### The ticket will have:
+  * Show Name
+  * Show time
+  * Seats
+  * Price
+  * Status(VIP)
+
+#### The upcoming shows will have:
+  * List of Bands
+  * Tour dates
+  * Ticket prices
 ```
-Write your answer here or in a separate js file.
+var tour = {
+  name: String,
+  citiesOnTour: String,
+  concertDates: String,
+  ticketPrice: Number
+}
+var ticket = {
+  showName: String,
+  showTime: String,
+  seats: String,
+  price: Number,
+  status: Boolean
+}
+var upNext = {
+  listOfBands: String,
+  tourDates: String,
+  ticketPrices: Number
+}
+
+var exampleTour = {
+  name: "Lady Gaga - Born This Way",
+  citiesOnTour: "Dallas, Atlanta, New York",
+  concertDates: "9/26, 10/1, 10/8",
+  ticketPrice: 220.00
+}
+var exampleTicket = {
+  showName: "Born This Way Tour",
+  showTime: "10:00pm",
+  seats: "G-55",
+  price: 350.00,
+  status: true
+}
+var exampleTourSuggestion = {
+  listOfBands: "Katy Perry",
+  tourDates: "11/12-3/15",
+  ticketPrices: 235.00
+}
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+#### A coffee shop has:
+  * A name
+  * A location
+  * A number of employees
+  * A popular drink
+
+#### A drink menu has:
+  * A name
+  * A price
+  * A list of ingredients
+  * Amount thats been ordered
+
+#### A shopping cart has:
+  * An Id
+  * A name for the customer
+  * The total cost
+  * The number of items in the cart
+
+```
+var coffeeshop = {
+  name: String,
+  location: String,
+  numberEmployees: Number,
+  menuItem: []
+}
+
+var menuItem = {
+  name: String,
+  popular: Boolean,
+  price: Number,
+  ingredients: String,
+  shoppingCart: Boolean
+}
+
+var shoppingCart = {
+  id: Number,
+  customerName: String,
+  totalCost: Number,
+  itemsInCart: Number
+}
+
+var exampleShop = {
+  name: "Coffee Days",
+  location: "341 Ponce de Leon Ave",
+  numberEmployees: 24,
+  menuItem: [
+    name: "Macchiato",
+    popular: true,
+    price: 4.75,
+    ingredients: "Milk, Espresso, Hazelnut Syrup",
+    shoppingCart: true
+  ]
+}
+var exampleCart = {
+  id: 1356,
+  customerName: "Skylar Youmans",
+  totalCost: 4.93,
+  itemsInCart: 1
+}
+```
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
+#### A sports team full stats has:
+  * A name
+  * Player
+  * Number Wins
+  * Number Losses
+
+#### An individual player has: 
+  * A name
+  * Age
+  * Height
+  * Weight
+  * Plays executed
+  * Plays won
+  * Plays lost
+
 ```
-Write your answer here or in a separate js file.
+var fullTeamStats = {
+  name: String,
+  player: [],
+  numberWins: Number,
+  numberLost: Number
+}
+var player = {
+  name: String,
+  age: Number,
+  height: String,
+  weight: Number,
+  playsExecuted: Number,
+  playsWon: Number,
+  playsLost: Number
+}
+
+var exampleTeam = {
+  name: "The Patriots",
+  player: [
+    name: "Some Name",
+    age: 25,
+    height: 5'11",
+    weight: 220,
+    playsExecuted: 22,
+    playsWon: 16,
+    playsLost: 6
+  ]
+  numberWins: 16,
+  numberLost: 4
+}
 ```
 
 

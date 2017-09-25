@@ -5,7 +5,10 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
 /* Controllers */
+
 const todontsController = require('./controllers/index');
+
+/* Uses */
 
 app.use(methodOverride('_method'));
 
