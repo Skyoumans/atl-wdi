@@ -49,7 +49,14 @@ var emailProvider = {
   username: String
   password: String
 }
-
+var exampleServiceProvider = {
+  id: 3485912,
+  name: "OutLook"
+  emailProvider = [
+    username: exampleName34,
+    password: examplepassword45
+  ]
+}
 ```
 
 ### 2. Radio on the Internet app
@@ -75,8 +82,8 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 ```
 var radioApp = {
   name: String,
-  Stations: String,
-  Playlists: String
+  Stations: [],
+  Playlist: []
 }
 var station = {
   name: String,
@@ -88,6 +95,20 @@ var playlist = {
   currentBand: String,
   numTimesPlayed: Number,
   aboutBand: String
+}
+var exampleRadioApp = {
+  name: "Fandora",
+  station: [
+    name: "Top Hits",
+    aboutGenre: "Hits",
+    numLikes: 13456
+  ]
+  playlist: [
+    currentSong: "Despacito",
+    currentBand: "Justin Bieber",
+    numTimesPlayed: 26,
+    aboutBand: "Canadian Pop star heartthrob"
+  ]
 }
 ```
 
