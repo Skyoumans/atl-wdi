@@ -295,7 +295,13 @@ var exampleTeam = {
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+Creating the data models at the beginning were definitely a guide in helping
+
+write out the JS objects and example pieces. Once you get started on writing 
+
+them out and think outside the box with writing out all the requirements for 
+
+each object, it becomes easier.
 ```
 
 ### Reading and Videos for Tomorrow
