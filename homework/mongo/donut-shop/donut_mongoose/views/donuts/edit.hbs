@@ -5,9 +5,23 @@
 	<a href="/">Return to Home Page</a>
 
 	<div id="edit-form" class="donut-container-show">
+		<form action="/donuts/{{donut._id}}?_method=PUT" method="POST">
+			<label for="name"></label>
+			<input type="text" name="name" placeholder="Name" value="{{donut.name}}">
+			<br>
+			<label for="description"></label>
+			<input type="text" name="description" placeholder="Description" value="{{donut.description}}">
+			<br>
+			<label for="price"></label>
+			<input type="text" name="price" placeholder="Price" value="{{donut.price}}">
+			<br>
+			<label for="qty"></label>
+			<input type="number" name="qty" placeholder="Quantity" value="{{donut.qty}}">
+			<br><br>			
+			<button type="submit">Update this Donut</button>
+		</form>
 
-
-		<<<<< YOUR WHOLE FORM GOES HERE >>>>>
+		
 
 
 		<div id="img-preview">
