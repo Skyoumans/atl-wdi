@@ -11,6 +11,8 @@ var hbs = require("hbs");
 var logger = require('morgan');
 const db = mongoose.connection
 
+
+
 //======================
 // MIDDLEWARE
 //======================
@@ -41,7 +43,10 @@ app.use('/', donutsController);
 //======================
 //CONNECT MONGOOSE TO "donut_store"
 
+
 mongoose.connect('mongodb://localhost/donut_store');
+mongoose.Promise = global.Promise
+
   db.once('open', function() {
     console.log('MONGOOSE IS CONNECTED TO DONUT_STORE')
 })  

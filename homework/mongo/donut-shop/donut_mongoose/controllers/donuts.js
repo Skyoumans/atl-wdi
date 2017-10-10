@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
     const newDonut = req.body
     DonutModel.create(newDonut)
     .then(() => {
-        res.redirect('/donuts')
+        res.redirect('/')
     })
     .catch((error) => {
         console.log(error)
@@ -77,7 +77,7 @@ router.get('/:id', (req, res) => {
 
     DonutModel.findById(donutId)
     .then((donut) => {
-        res.render('donuts/show', {
+        res.render('/show', {
             donut: donut
         })
     })
@@ -94,7 +94,7 @@ router.put('/:id', (req, res) => {
     const updatedDonut = req.body
     DonutModel.findByIdAndUpdate(donutIdToUpdate, updatedDonut, { new: true })
     .then(() => {
-        res.redirect(`/donuts/${donutIdToUpdate}`)
+        res.redirect(`${donutIdToUpdate}`)
     })
     .catch((error) => {
         console.log(error)
@@ -111,7 +111,7 @@ router.delete('/:id', (req, res) => {
     const donutId = req.params.id
     DonutModel.findByIdAndRemove(donutId)
         .then((donut) => {
-            res.redirect('/donuts')
+            res.redirect('/')
         })
         .catch((error) => {
             console.log(error)
