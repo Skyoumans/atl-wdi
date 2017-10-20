@@ -110,7 +110,7 @@ SELECT name FROM city WHERE id = '211';
 
 -- name
 -- ------------
--- Brasï¿½lia
+-- Brasilia
 -- (1 row)
 
 

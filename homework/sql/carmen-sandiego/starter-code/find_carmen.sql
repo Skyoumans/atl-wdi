@@ -20,12 +20,11 @@
 
 -- CLUE 5
 
---   SELECT name FROM country WHERE code = 'BRA';
+--   SELECT name FROM city WHERE id = '211';
 
 -- CLUE 6
 
---   SELECT name FROM city WHERE id = '211';
-
+--   SELECT name FROM country WHERE code = 'BRA';
 
 -- CLUE 7 & 8
 
