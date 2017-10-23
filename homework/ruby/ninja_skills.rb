@@ -52,18 +52,47 @@
 
 # Challenge 7: Hashes
 
-my_favorite_animals = {
-  "edgar": "donkey",
-  "lilee": "dog",
-  "winney": "horse",
-  "bleu": "fish",
-  "tigger": "cat"
-}
+# my_favorite_animals = {
+#   "edgar": "donkey",
+#   "lilee": "dog",
+#   "winney": "horse",
+#   "bleu": "fish",
+#   "tigger": "cat"
+# }
 
-my_favorite_animals[:"edgar"] = "Bear"
-puts my_favorite_animals
+# my_favorite_animals[:"edgar"] = "Bear"
+# puts my_favorite_animals
 
-favorite_movie= {}
+# favorite_movie= {}
 
-favorite_movie[:"title"] = "The Dark Knight"
-puts favorite_movie
+# favorite_movie[:"title"] = "The Dark Knight"
+# puts favorite_movie
+
+
+# Challenge 8: Ranges
+
+first_range = (1..10)
+puts first_range.to_a
+second_range = (1..999)
+puts second_range.to_a
+
+for entry in first_range do 
+  entry.to_s
+  puts entry
+end
+
+new_array = []
+first_range.each do |stuff|
+  if stuff.odd? == true
+    new_array.push(stuff * 2)
+  end
+end
+p new_array
+
+first_range.map do |num|
+  if num % 2 == 0
+    p num.to_s
+  else
+    p num
+  end
+end
