@@ -26,3 +26,15 @@ puts d
 christine = "Hi, I'm Christine"
 likes_to = "long walks on the beach, kinda"
 puts "#{christine} and I like #{likes_to}"
+
+# Challenge 5. Input and Output
+
+puts "Input a Number"
+number = gets.chomp
+puts number.to_i * 2
+
+puts "What is your name?"
+name = gets.chomp
+puts "What do you like to do?"
+likes = gets.chomp
+puts "#{name} likes to #{likes}"
