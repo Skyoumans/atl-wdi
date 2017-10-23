@@ -14,3 +14,10 @@
 # print n
 # puts n.class
 
+# Challenge 3: Integers
+
+d = 10
+puts d
+e = 3.1
+d = e
+puts d
