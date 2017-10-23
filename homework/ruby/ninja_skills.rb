@@ -71,28 +71,40 @@
 
 # Challenge 8: Ranges
 
-first_range = (1..10)
-puts first_range.to_a
-second_range = (1..999)
-puts second_range.to_a
+# first_range = (1..10)
+# puts first_range.to_a
+# second_range = (1..999)
+# puts second_range.to_a
 
-for entry in first_range do 
-  entry.to_s
-  puts entry
-end
+# for entry in first_range do 
+#   entry.to_s
+#   puts entry
+# end
 
-new_array = []
-first_range.each do |stuff|
-  if stuff.odd? == true
-    new_array.push(stuff * 2)
+# new_array = []
+# first_range.each do |stuff|
+#   if stuff.odd? == true
+#     new_array.push(stuff * 2)
+#   end
+# end
+# p new_array
+
+# first_range.map do |num|
+#   if num % 2 == 0
+#     p num.to_s
+#   else
+#     p num
+#   end
+# end
+
+# Challenge 9
+
+new_range = (1..1000)
+new_range = new_range.to_a
+add = 0
+new_range.each do |things|
+  if things % 3 == 0 || things % 5 == 0
+    add += things
   end
 end
-p new_array
-
-first_range.map do |num|
-  if num % 2 == 0
-    p num.to_s
-  else
-    p num
-  end
-end
+  p add
