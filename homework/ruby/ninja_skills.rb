@@ -41,11 +41,29 @@
 
 # Challenge 6: Arrays
 
-my_first_array = []
-puts my_first_array = ["What", "are", "we", "doing", "here", 1,2,3,4,5]
-puts my_first_array.last
-puts my_first_array.first
-puts my_first_array.insert(1, "Joe")
-puts my_first_array.insert(2, 3)
-puts my_first_array.push("true")
-puts my_first_array.push[3]
+# my_first_array = []
+# puts my_first_array = ["What", "are", "we", "doing", "here", 1,2,3,4,5]
+# puts my_first_array.last
+# puts my_first_array.first
+# puts my_first_array.insert(1, "Joe")
+# puts my_first_array.insert(2, 3)
+# puts my_first_array.push("true")
+# puts my_first_array.push[3]
+
+# Challenge 7: Hashes
+
+my_favorite_animals = {
+  "edgar": "donkey",
+  "lilee": "dog",
+  "winney": "horse",
+  "bleu": "fish",
+  "tigger": "cat"
+}
+
+my_favorite_animals[:"edgar"] = "Bear"
+puts my_favorite_animals
+
+favorite_movie= {}
+
+favorite_movie[:"title"] = "The Dark Knight"
+puts favorite_movie
