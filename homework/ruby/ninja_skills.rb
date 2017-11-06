@@ -99,12 +99,12 @@
 
 # Challenge 9
 
-new_range = (1..1000)
-new_range = new_range.to_a
-add = 0
-new_range.each do |things|
-  if things % 3 == 0 || things % 5 == 0
-    add += things
-  end
-end
-  p add
+# new_range = (1..1000)
+# new_range = new_range.to_a
+# add = 0
+# new_range.each do |things|
+#   if things % 3 == 0 || things % 5 == 0
+#     add += things
+#   end
+# end
+#   p add

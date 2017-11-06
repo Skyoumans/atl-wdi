@@ -21,6 +21,11 @@ people = [
 
 upper_case_full_names = []
 
+people.each do |name|
+    upper_case_full_names.push(name.first_name.upcase)
+    upper_case_full_names.push(name.last_name.upcase)
+end
+puts upper_case_full_names
 
 #   2. Find the first order for each user
 
